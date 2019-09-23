@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[]args)
+    {
+        //Create a scanner object
+        Scanner Keyboard = new Scanner(System.in);
+        
+        //Declare Variables
+        double salary, yearsOnJob;
+        
+        //Get annual salary
+        System.out.print("Enter your annual salary: ");
+        salary = Keyboard.nextDouble();
+        
+        //Get the number of years on the current job
+        System.out.print("Enter the number of years on your current job: ");
+        yearsOnJob = Keyboard.nextDouble();
+        
+        //Determine whether the user qualifies for the loan
+        if(salary >= 30000 && yearsOnJob >= 2)
+        {
+            System.out.print("You qualify for this loan.");
+        }
+        else
+        {
+            System.out.print("You do not ualify for this loan.");
+        }
+    }
+}
