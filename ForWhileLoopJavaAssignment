@@ -1,0 +1,48 @@
+public class Main
+{
+    public static void main(String[] args)
+    {
+        //Create a Scanner Object
+        Scanner keyboard = new Scanner(System.in);
+        
+        //Declare variables
+        int numStudents;
+        int numTestScores;
+        int student;
+        int testNum;
+        double total;
+        double score;
+        double average;
+        
+        // Get number of students
+        System.out.println("How many students do you have? ");
+        numStudents = keyboard.nextInt();
+        
+        // Get number of test scores per students
+        System.out.println("How many test scores per student? ");
+        numTestScores = keyboard.nextInt();
+        
+        //Determine each student's average test score
+        for (student = 1; student <= numStudents; student++)
+        {
+            // Initialize an accumulator for test score
+            total = 0;
+            
+            // Get student's test score
+            System.out.println("Student number " + student);
+            System.out.println("---------------");
+            for (testNum = 1; testNum <= numTestScores; testNum++)
+            {
+                System.out.println("Enter test number " + testNum + ": ");
+                score = keyboard.nextDouble();
+                total = total + score;
+            }
+            
+            // Calculate the average test score for this student
+            average = total / numTestScores;
+            
+            // Display the average
+            System.out.println("The average for student " + student + " is " + average);
+        }
+    }
+}
