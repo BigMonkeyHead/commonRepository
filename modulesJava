@@ -1,0 +1,72 @@
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        // Create a Scanner object for keyboard input.
+        Scanner keyboard = new Scanner(System.in);
+        
+        // Display the starting message.
+        startingMessage();
+        System.out.println("Press Enter to see Step 1.");
+        keyboard.nextLine();
+        
+        // Display step 1.
+        step1();
+        System.out.println("Press Enter to see Step 2.");
+        keyboard.nextLine();
+        
+        // Display step 2.
+        step2();
+        System.out.println("Press Enter to see Step 3.");
+        keyboard.nextLine();
+        
+        // Display step 3.
+        step3();
+        System.out.println("Press Enter to see Step 4.");
+        keyboard.nextLine();
+        
+        // Display step 4.
+        step4();
+    }
+    
+    public static void startingMessage()
+    {
+        System.out.println( "This program tells you how to");
+        System.out.println( "disassemble an ACME laundry dryer.");
+        System.out.println( "There are 4 steps in the process.");
+    }
+    
+    /* The step1 module displays the instructions
+    for step 1. */
+    public static void step1()
+    {
+        System.out.println( "Step 1: Unplug the dryer and");
+        System.out.println( "move it away from the wall.");
+    }
+    
+    /* The step2 module displays the instructions
+    for step 2. */
+    public static void step2()
+    {
+        System.out.println( "Step 2: Remove the six screws");
+        System.out.println( "from the back of the dryer.");
+    }
+    
+    /* The step3 module displays the instructions for
+    step 3. */
+    public static void step3()
+    {
+        System.out.println( "Step 3: Remove the dryer's");
+        System.out.println( "back panel.");
+    }
+    
+    /* The step4 module displays the instructions for
+    step 4. */
+    public static void step4()
+    {
+        System.out.println( "Step 4: Pull the top of the");
+        System.out.println( "dryer straight up.");
+    }
+}
