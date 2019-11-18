@@ -74,7 +74,7 @@ public class Main
         // Local variables
         double inches, centimeters;
         
-        // Create a Scanner object for keybaord input
+        // Create a Scanner object for keyboard input
         Scanner keyboard = new Scanner(System.in);
         
         // Convert inches to centimeters.
@@ -91,7 +91,7 @@ public class Main
         // Local variables
         double feet, meters;
         
-        // Create a Scanner object for keybaord input.
+        // Create a Scanner object for keyboard input.
         Scanner keyboard = new Scanner(System.in);
         
         // Convert feet to meters.
