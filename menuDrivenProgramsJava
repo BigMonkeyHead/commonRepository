@@ -1,0 +1,120 @@
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args)  
+    {
+        /* Declare a variable to hold the
+        user's menu selection.*/
+        int menuSelection;
+        
+        do
+        {
+            /* Display the menu and get
+            the user's selection.*/
+            menuSelection = displayMenu();
+            
+            // Perform the selection operation
+            switch(menuSelection)
+            {
+                case 1:
+                    inchesToCentimeters();
+                    break;
+                    
+                case 2:
+                    feetToMeters();
+                    break;
+                    
+                case 3:
+                    milesToKilometers();
+                    break;
+            }
+        } while (menuSelection != 3);
+    }
+
+
+    /* The displayMenu method displays the menu
+    and prompts the user for a selection. The selected
+    value is validated and returned from the method.*/
+    public static int displayMenu()
+    {
+        /* Declare a variable to hold
+        the user's menu selection.*/
+        int selection;
+        
+        // Create a scanner object for keyboard input.
+        Scanner keyboard = new Scanner(System.in);
+        
+        // System.out.println( the menu.
+        System.out.println("1. Convert inches to centimeters.");
+        System.out.println("2. Convert feet to meters.");
+        System.out.println("3. Convert miles to kilometers.");
+        System.out.println();
+        
+        // Prompt the user for a selection
+        System.out.print("Enter your selection: ");
+        selection = keyboard.nextInt();
+        
+        // Validate the menu selection
+        while (selection < 1 || selection > 3)
+        {
+            System.out.println("That is an invalid selection.");
+            System.out.print("Enter 1, 2, or 3.");
+            selection = keyboard.nextInt();
+        }
+        
+        // Return the menu selection.
+        return selection;
+    }
+    
+    /* The inchesToCentimeters method converts
+    a measurement from inches to centimeters.*/
+    public static void inchesToCentimeters()
+    {
+        // Local variables
+        double inches, centimeters;
+        
+        // Create a Scanner object for keybaord input
+        Scanner keyboard = new Scanner(System.in);
+        
+        // Convert inches to centimeters.
+        System.out.println("Enter the number of inches. ");
+        inches = keyboard.nextDouble();
+        centimeters = inches * 2.54;
+        System.out.println("That is equal to " + centimeters + " centimeters.");
+    }
+    
+    /* The feetToMeters method converts a
+    measurement from feet to meters.*/
+    public static void feetToMeters()
+    {
+        // Local variables
+        double feet, meters;
+        
+        // Create a Scanner object for keybaord input.
+        Scanner keyboard = new Scanner(System.in);
+        
+        // Convert feet to meters.
+        System.out.println("Enter the number of feet. ");
+        feet = keyboard.nextDouble();
+        meters = feet * 0.3048;
+        System.out.println("That is equal to " + meters + " meters.");
+    }
+    
+    /* The milesToKilometers method converts a 
+    measurement from miles to kilometers.*/
+    public static void milesToKilometers()
+    {
+        // Local variables
+        double miles, kilometers;
+        
+        // Create a Scanner object for keyboard input.
+        Scanner keyboard = new Scanner(System.in);
+        
+        // Convert miles to kilometers.
+        System.out.println("Enter the number of miles. ");
+        miles = keyboard.nextDouble();
+        kilometers = miles * 1.609;
+        System.out.println("That is equal to " + kilometers + " kilometers.");
+    }
+}
